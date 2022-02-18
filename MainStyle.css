@@ -2,11 +2,40 @@ body {
     margin: 0px;
 }
 
+
+/* if less than 1000px wide */
+
+@media screen and (max-width: 1000px) {
+    .header {
+        width: auto;
+    }
+    .content {
+        width: auto;
+    }
+    .footer {
+        width: auto;
+    }
+}
+
+
+/* if more than 1000px wide */
+
+@media screen and (min-width: 1000px) {
+    .header {
+        width: 1000px;
+    }
+    .content {
+        width: 1000px;
+    }
+    .footer {
+        width: 1000px;
+    }
+}
+
 .header {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    width: 1000px;
     height: 100px;
     border: 1px solid #000000;
     background: #588B8B;
@@ -15,7 +44,6 @@ body {
 .content {
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
     height: 500px;
     border: 1px solid #000000;
     background: #FFFFFF;
@@ -25,7 +53,6 @@ body {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
     height: 50px;
     border: 1px solid #000000;
     background: #C8553D;
