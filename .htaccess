@@ -1,0 +1,6 @@
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+
+<Files "noAccess.html">
+    Require all denied
+</Files>
