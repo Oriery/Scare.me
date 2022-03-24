@@ -6,6 +6,7 @@ body {
     background: url(sad_man.jpg) no-repeat;
     background-size: cover;
     /* Масштабирует картинку сохраняя пропорции */
+    background-position: 30% 50%;
 }
 
 .over {

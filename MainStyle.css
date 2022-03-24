@@ -2,58 +2,103 @@ body {
     margin: 0px;
 }
 
-
-/* if less than 1000px wide */
-
-@media screen and (max-width: 1000px) {
-    .header {
-        width: auto;
-    }
-    .content {
-        width: auto;
-    }
-    .footer {
-        width: auto;
-    }
-}
-
-
-/* if more than 1000px wide */
-
-@media screen and (min-width: 1000px) {
-    .header {
-        width: 1000px;
-    }
-    .content {
-        width: 1000px;
-    }
-    .footer {
-        width: 1000px;
-    }
-}
-
-.header {
+header,
+main,
+footer {
+    width: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
-    height: 100px;
-    border: 1px solid #000000;
+}
+
+@media screen and (min-width: 1000px) {
+    header,
+    main,
+    footer {
+        width: 1000px;
+    }
+}
+
+header {
     background: #588B8B;
 }
 
-.content {
-    margin-left: auto;
-    margin-right: auto;
-    height: 500px;
-    border: 1px solid #000000;
+main {
     background: #FFFFFF;
 }
 
-.footer {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+footer {
     height: 50px;
-    border: 1px solid #000000;
     background: #C8553D;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+h1 {
+    margin-block: 0;
+}
+
+.logo-container * {
+    display: inline-block;
+    text-decoration: none;
+    color: #eee;
+}
+
+.logo-image {
+    margin: 10px 10px;
+    height: 32px;
+}
+
+.menu li {
+    display: block;
+}
+
+.menu li a {
+    display: block;
+    padding: 20px 15px;
+    margin: 0px 5px;
+    text-decoration: none;
+    color: #eee;
+    text-align: center;
+}
+
+.menu li a:hover {
+    background-color: #487B7B;
+}
+
+.menu .selected a {
+    background-color: #C8553D;
+}
+
+.menu .selected a:hover {
+    background-color: #B8452D;
+}
+
+@media screen and (max-width: 720px) {
+    .navbar,
+    .menu {
+        display: block;
+    }
+    .menu li a {
+        padding: 5px 20px;
+        margin: 2px 0px;
+    }
+}
+
+ul {
+    margin: 0;
 }

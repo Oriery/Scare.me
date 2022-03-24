@@ -2,9 +2,9 @@
 <html>
 
 <body>
-    <div class="footer">
+    <footer class="footer">
         <h2>Подвал</h2>
-    </div>
+    </footer>
 </body>
 
 </html>
