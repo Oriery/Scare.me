@@ -12,10 +12,7 @@
         <div class="navbar">
             <div class="logo-container">
                 <a href="/">
-                    <img class="logo-image" src="logo.svg" alt="Logo"/>
-                </a>
-                <a href="/">
-                    <h1>Scare.me</h1>
+                    <img class="logo-image" src="logo_norm.svg" alt="Logo"/>
                 </a>
             </div>
             <nav>

@@ -34,6 +34,31 @@ footer {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 60px;
+}
+
+.logo-image:hover {
+    content: url(/logo_active.svg);
+}
+
+nav {
+    display: flex;
+    align-items: stretch;
 }
 
 .menu {
@@ -41,39 +66,23 @@ footer {
     list-style: none;
     padding: 0;
     text-transform: uppercase;
-}
-
-.logo-container {
-    display: inline-flex;
-    align-items: center;
-}
-
-h1 {
-    margin-block: 0;
-}
-
-.logo-container * {
-    display: inline-block;
-    text-decoration: none;
-    color: #eee;
-}
-
-.logo-image {
-    margin: 10px 10px;
-    height: 32px;
+    align-items: stretch;
 }
 
 .menu li {
-    display: block;
+    display: flex;
+    align-items: stretch;
 }
 
 .menu li a {
-    display: block;
-    padding: 20px 15px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0px 5px;
     text-decoration: none;
     color: #eee;
     text-align: center;
+    align-items: center;
 }
 
 .menu li a:hover {
@@ -88,10 +97,13 @@ h1 {
     background-color: #B8452D;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 520px) {
     .navbar,
-    .menu {
-        display: block;
+    .menu,
+    .menu li,
+    .menu li a,
+    nav {
+        flex-direction: column;
     }
     .menu li a {
         padding: 5px 20px;
