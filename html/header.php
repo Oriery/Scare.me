@@ -3,7 +3,7 @@
 
 <head>
     <title>Заказные пугания</title>
-    <link rel="stylesheet" type="text/css" href="/MainStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/style/MainStyle.css" />
     <meta charset="utf-8" />
 </head>
 
@@ -12,17 +12,16 @@
         <div class="navbar">
             <div class="logo-container">
                 <a href="/">
-                    <img class="logo-image" src="logo_norm.svg" alt="Logo"/>
+                    <img class="logo-image" src="../img/Logo_norm.svg" alt="Logo"/>
                 </a>
             </div>
             <nav>
                 <ul class="menu">
                     <li class="selected"><a href="/">Главная</a></li>
-                    <li><a href="/">Наёмники</a></li>
+                    <li><a href="/mercenaries.php">Наёмники</a></li>
                     <li><a href="/">Помощь</a></li>
                 </ul>
             </nav>
-            <div></div>
         </div>
     </header>
 </body>
