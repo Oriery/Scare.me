@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="/style/MainStyle.css" />
-</head>
-
 <body>
     <footer>
         <div class="navbar"> <!-- вообще по-хорошему поправить на что-то другое, но и так норм пока -->
