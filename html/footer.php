@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="/style/MainStyle.css" />
-</head>
-
 <body>
     <footer>
         <div class="navbar"> <!-- вообще по-хорошему поправить на что-то другое, но и так норм пока -->
             <div class="logo-container">
                 <a href="/">
-                    <img class="logo-image" src="../img/Logo_norm.svg" alt="Logo"/>
+                    <img class="logo-image" src="../media/logo/Logo_norm.svg" alt="Logo"/>
                 </a>
             </div>
             <div class="links">
