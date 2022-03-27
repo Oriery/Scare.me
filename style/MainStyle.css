@@ -253,11 +253,11 @@ ul {
 }
 
 .friendly {
-    --img: url(../media/lending/squares/master.jpg);
+    --img: url(../media/lending/squares/friendly.webp);
 }
 
 .actual {
-    --img: url(../media/lending/squares/master.jpg);
+    --img: url(../media/lending/squares/actual.webp);
 }
 
 .square {
