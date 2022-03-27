@@ -89,7 +89,7 @@ footer p {
 }
 
 .logo-image:hover {
-    content: url(/img/Logo_active.svg);
+    content: url(../media/logo/Logo_active.svg);
 }
 
 nav {
@@ -237,27 +237,27 @@ ul {
 }
 
 .quality {
-    --img: url(/media/squares/quality.jpg);
+    --img: url(../media/lending/squares/quality.jpg);
 }
 
 .price {
-    --img: url(/media/squares/price.jpg);
+    --img: url(../media/lending/squares/price.jpg);
 }
 
 .indiv {
-    --img: url(/media/squares/indiv.jpg);
+    --img: url(../media/lending/squares/indiv.jpg);
 }
 
 .master {
-    --img: url(/media/squares/master.jpg);
+    --img: url(../media/lending/squares/master.jpg);
 }
 
 .friendly {
-    --img: url(/media/squares/master.jpg);
+    --img: url(../media/lending/squares/master.jpg);
 }
 
 .actual {
-    --img: url(/media/squares/master.jpg);
+    --img: url(../media/lending/squares/master.jpg);
 }
 
 .square {

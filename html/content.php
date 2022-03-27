@@ -4,7 +4,7 @@
 <body>
     <main>
         <div class="gun-container">
-            <img class="gun-img" src="gun_bang.jpeg" alt="gun with Bang flag"/>
+            <img class="gun-img" src="../media/lending/gun_bang.jpeg" alt="gun with Bang flag"/>
             <div class="quote-container">
                 <div class="quote">
                     <span class="line">Только страх способен заставить человека делать лабу.</span>

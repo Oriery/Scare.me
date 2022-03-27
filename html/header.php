@@ -12,7 +12,7 @@
         <div class="navbar">
             <div class="logo-container">
                 <a href="/">
-                    <img class="logo-image" src="../img/Logo_norm.svg" alt="Logo"/>
+                    <img class="logo-image" src="../media/logo/Logo_norm.svg" alt="Logo"/>
                 </a>
             </div>
             <nav>
