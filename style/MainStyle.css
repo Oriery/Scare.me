@@ -52,10 +52,6 @@ header {
     background: #588B8B;
 }
 
-main {
-    /*background: #444;*/
-}
-
 footer {
     border: 1px solid #000000;
     background: #C8553D;
@@ -269,7 +265,7 @@ ul {
 }
 
 .square:hover {
-    --lin-gradient: linear-gradient(rgba(150, 150, 150, 0.3), rgba(0, 0, 0, 0.2));
+    box-shadow: 0 5px 20px 5px rgba(144, 144, 144, 0.4);
 }
 
 .square {
