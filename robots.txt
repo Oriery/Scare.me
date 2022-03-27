@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /errors
 Disallow: /html
 Disallow: /style
-Disallow: /img
+Disallow: /media
