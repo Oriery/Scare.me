@@ -36,6 +36,7 @@ h2 {
     background-color: #588b8b;
     border-radius: 4px;
     color: #fff;
+    padding: 0 3px 0 3px;
 }
 
 .performer img {
@@ -64,6 +65,7 @@ h2 {
 }
 
 .back {
+    margin-top: 10px;
     height: var(--height);
     display: flex;
     flex-direction: column;

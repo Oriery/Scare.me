@@ -12,7 +12,7 @@
                     <div class="front">
                         <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
                         <h4>Name 11</h4>
-                        <p>Примерная цена: <strong>1000</strong></p>
+                        <p>Цена: <strong>1000</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
                     </div>
                     <div class="back">
@@ -24,7 +24,7 @@
                     <div class="front">
                         <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
                         <h4>Name 11</h4>
-                        <p>Примерная цена: <strong>100</strong></p>
+                        <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
                     </div>
                     <div class="back">
@@ -36,7 +36,7 @@
                     <div class="front">
                         <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
                         <h4>Name 11</h4>
-                        <p>Примерная цена: <strong>100</strong></p>
+                        <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
                     </div>
                     <div class="back">
@@ -48,7 +48,7 @@
                     <div class="front">
                         <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
                         <h4>Name 11</h4>
-                        <p>Примерная цена: <strong>100</strong></p>
+                        <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
                     </div>
                     <div class="back">
@@ -60,7 +60,7 @@
                     <div class="front">
                         <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
                         <h4>Name 11</h4>
-                        <p>Примерная цена: <strong>100</strong></p>
+                        <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
                     </div>
                     <div class="back">
