@@ -260,16 +260,12 @@ ul {
     --img: url(../media/lending/squares/actual.webp);
 }
 
-.square {
-    --lin-gradient: none;
-}
-
 .square:hover {
     box-shadow: 0 5px 20px 5px rgba(144, 144, 144, 0.4);
 }
 
 .square {
-    background: var(--lin-gradient), var(--img);
+    background: var(--img);
     background-size: cover;
     background-position: center;
 }
