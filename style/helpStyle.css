@@ -1,6 +1,5 @@
 :root {
     --width: 900px;
-    --height: 300px;
 }
 
 .help-box {
@@ -15,6 +14,7 @@
 }
 .question {
     height: 50px;
+    width: var(--width);
     border: 3px solid #f28f3b;
     background-color: #ffd5c2;
     transition: 1s;
