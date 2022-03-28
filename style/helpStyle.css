@@ -1,4 +1,4 @@
-:root {
+main {
     --width: 900px;
 }
 
@@ -12,6 +12,7 @@
     margin-top: 30px;
     width: var(--width);
 }
+
 .question {
     height: 50px;
     width: var(--width);
