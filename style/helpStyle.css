@@ -1,11 +1,12 @@
 main {
-    --width: 900px;
+    --width: auto;
 }
 
 .help-box {
     display: flex;
     flex-wrap: wrap;
     margin: 70px 50px;
+    flex-direction: column;
 }
 
 .box-item {
