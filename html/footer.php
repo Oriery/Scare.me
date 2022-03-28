@@ -5,16 +5,16 @@
         <div class="navbar"> <!-- вообще по-хорошему поправить на что-то другое, но и так норм пока -->
             <div class="logo-container">
                 <a href="/">
-                    <img class="logo-image" src="../media/logo/Logo_norm.svg" alt="Logo"/>
+                    <img class="logo-image" src="/media/logo/Logo_norm.svg" alt="Logo"/>
                 </a>
             </div>
             <div class="links">
-                <a href="https://vk.com/feed"><img src="/img/brands/vk.svg" alt="logo"></a>
-                <a href="https://www.instagram.com/"><img src="/img/brands/instagram.svg" alt="logo"></a>
-                <a href="https://github.com/"><img src="/img/brands/github.svg" alt="logo"></a>
-                <a href="https://bitbucket.org/"><img src="/img/brands/bitbucket.svg" alt="logo"></a>
-                <a href="https://twitter.com/"><img src="/img/brands/twitter.svg" alt="logo"></a>
-                <a href="https://www.youtube.com/"><img src="/img/brands/youtube.svg" alt="logo"></a>
+                <a href="https://vk.com/feed"><img src="/media/logo/brands/vk.svg" alt="logo"></a>
+                <a href="https://www.instagram.com/"><img src="/media/logo/brands/instagram.svg" alt="logo"></a>
+                <a href="https://github.com/"><img src="/media/logo/brands/github.svg" alt="logo"></a>
+                <a href="https://bitbucket.org/"><img src="/media/logo/brands/bitbucket.svg" alt="logo"></a>
+                <a href="https://twitter.com/"><img src="/media/logo/brands/twitter.svg" alt="logo"></a>
+                <a href="https://www.youtube.com/"><img src="/media/logo/brands/youtube.svg" alt="logo"></a>
             </div>
         </div>
         <p> loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum</p>
