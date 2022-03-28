@@ -10,7 +10,7 @@
             <div class="performers_row">
                 <div class="performer">
                     <div class="front">
-                        <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
+                        <img src="../media/icons_of_performers/blank-person.jpg" alt="Страшила">
                         <h4>Name 11</h4>
                         <p>Цена: <strong>1000</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="performer">
                     <div class="front">
-                        <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
+                        <img src="../media/icons_of_performers/blank-person.jpg" alt="Страшила">
                         <h4>Name 11</h4>
                         <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="performer">
                     <div class="front">
-                        <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
+                        <img src="../media/icons_of_performers/blank-person.jpg" alt="Страшила">
                         <h4>Name 11</h4>
                         <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="performer">
                     <div class="front">
-                        <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
+                        <img src="../media/icons_of_performers/blank-person.jpg" alt="Страшила">
                         <h4>Name 11</h4>
                         <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="performer">
                     <div class="front">
-                        <img src="../media/icons_of_performers/silhouette_black.png" alt="Страшила">
+                        <img src="../media/icons_of_performers/blank-person.jpg" alt="Страшила">
                         <h4>Name 11</h4>
                         <p>Цена: <strong>100</strong></p>
                         <p>Особенности: <strong>аккуратная работа</strong>, <strong>гарантии выполнения</strong></p>
