@@ -19,7 +19,7 @@
                 <ul class="menu">
                     <li class="selected"><a href="/">Главная</a></li>
                     <li><a href="/mercenaries.php">Наёмники</a></li>
-                    <li><a href="/">Помощь</a></li>
+                    <li><a href="/help.php">Помощь</a></li>
                 </ul>
             </nav>
         </div>

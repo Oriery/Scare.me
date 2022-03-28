@@ -1,0 +1,44 @@
+:root {
+    --width: 900px;
+    --height: 300px;
+}
+
+.help-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 50px;
+}
+
+.box-item {
+    margin-top: 30px;
+    width: var(--width);
+}
+.question {
+    height: 50px;
+    border: 3px solid #f28f3b;
+    background-color: #ffd5c2;
+    transition: 1s;
+}
+
+.question a {
+    position: absolute;
+    width: var(--width);
+    height: inherit;
+}
+
+.answer {
+    height: 100px;
+    width: var(--width);
+    border: 3px solid #f28f3b;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.box-item:not(:hover) .answer {
+    transform: scale(0);
+    position: absolute;
+}
+
+.box-item:hover .answer {
+    transform: scale(1);
+}
