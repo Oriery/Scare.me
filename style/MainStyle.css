@@ -11,30 +11,6 @@ footer {
     margin-right: auto;
 }
 
-@media screen and (max-width: 1000px) {
-    .header {
-        width: auto;
-    }
-    .content {
-        width: auto;
-    }
-    .footer {
-        width: auto;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .header {
-        width: 1000px;
-    }
-    .content {
-        width: 1000px;
-    }
-    .footer {
-        width: 1000px;
-    }
-}
-
 .header {
     margin-left: auto;
     margin-right: auto;
