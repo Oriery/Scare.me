@@ -1,4 +1,4 @@
 <?php
-include("./html/header.php");
-include("./html/mercenaryContent.php");
-include("./html/footer.php");
+include("./html/header.html");
+include("./html/mercenaryContent.html");
+include("./html/footer.html");

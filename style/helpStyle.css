@@ -20,12 +20,6 @@
     transition: 1s;
 }
 
-.question a {
-    position: absolute;
-    width: var(--width);
-    height: inherit;
-}
-
 .answer {
     height: 100px;
     width: var(--width);
