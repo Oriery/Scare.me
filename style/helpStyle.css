@@ -29,12 +29,3 @@ main {
     background-color: white;
     transition: 0.5s;
 }
-
-.box-item:not(:hover) .answer {
-    transform: scale(0);
-    position: absolute;
-}
-
-.box-item:hover .answer {
-    transform: scale(1);
-}
