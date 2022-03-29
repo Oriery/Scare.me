@@ -63,6 +63,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 8px;
+    transition: 0.2s;
 }
 
 @media screen and (max-width: 460px) {
