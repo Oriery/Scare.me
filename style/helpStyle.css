@@ -12,20 +12,50 @@ main {
 .box-item {
     margin-top: 30px;
     width: var(--width);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.2s;
+}
+
+.box-item p {
+    margin: 5px;
+}
+
+.answer,
+.question {
+    border: 3px solid #f28f3b;
+    border-radius: 8px;
 }
 
 .question {
     height: 50px;
     width: var(--width);
-    border: 3px solid #f28f3b;
     background-color: #ffd5c2;
     transition: 1s;
+    display: flex;
+    align-items: center;
 }
 
 .answer {
-    height: 100px;
-    width: var(--width);
-    border: 3px solid #f28f3b;
     background-color: white;
-    transition: 0.5s;
+    transition: 0.2s;
+    position: absolute;
+    transform: scale(0);
+    top: 53px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box-item:hover {
+    z-index: 1;
+}
+
+.box-item:hover .answer {
+    height: fit-content;
+    transform: scale(1);
+}
+
+.box-item:hover~.box-item {
+    filter: blur(2px) brightness(0.9);
 }
