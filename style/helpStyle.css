@@ -2,15 +2,20 @@ main {
     --width: auto;
 }
 
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
 .help-box {
     display: flex;
     flex-wrap: wrap;
-    margin: 70px 50px;
+    margin: 20px 50px;
     flex-direction: column;
 }
 
 .box-item {
-    margin-top: 30px;
+    margin-bottom: 30px;
     width: var(--width);
     display: flex;
     flex-direction: column;
