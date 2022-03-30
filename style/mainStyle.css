@@ -141,7 +141,6 @@ ul {
 
 .links img {
     filter: invert(100%);
-    position: relative;
     display: inline;
     margin: 5px;
     width: 35px;
