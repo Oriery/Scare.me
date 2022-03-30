@@ -54,6 +54,7 @@ h2 {
 
 .box-item:hover {
     z-index: 1;
+    transform: scale(1.01);
 }
 
 .box-item:hover .answer {
