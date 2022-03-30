@@ -10,6 +10,7 @@ h2 {
 }
 
 .performer {
+    font-size: 0.85em;
     --width: 160px;
     --height: 300px;
     width: var(--width);

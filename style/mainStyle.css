@@ -1,4 +1,10 @@
+@font-face {
+    font-family: "Main Font";
+    src: url("../media/fonts/SourceSerif4-VariableFont_opsz\,wght.ttf");
+}
+
 body {
+    font-family: "Main Font", serif;
     margin: 0px;
     background-color: #222;
 }
@@ -38,8 +44,7 @@ footer p {
     width: 200px;
     color: white;
     font-size: 14px;
-    font-family: Roboto, serif;
-    font-weight: lighter;
+    font-weight: 100;
 }
 
 .navbar {

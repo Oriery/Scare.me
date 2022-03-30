@@ -36,11 +36,11 @@
 }
 
 .quote .line {
-    font-size: min(2.5vw, 140%);
+    font-size: min(2.0vw, 100%);
 }
 
 .quote .author {
-    font-size: min(1.6vw, 100%);
+    font-size: min(1.5vw, 80%);
 }
 
 .squares-container {
@@ -68,12 +68,12 @@
     transition: 0.2s;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
     .square {
         --width: 150px;
         --height: 150px;
         margin: 5px;
-        ;
+        font-size: 0.7em;
     }
     .squares-container {
         max-width: 400px;
