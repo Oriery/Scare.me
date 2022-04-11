@@ -1,5 +1,7 @@
 <?php
 
+require_once("./template_utils.php");
+
 // Импорт html
 $main_template = file_get_contents("./html/templ_main.html");
 $header = file_get_contents("./html/header.html");
@@ -11,15 +13,7 @@ $footer = file_get_contents("./html/footer.html");
 $add_to_head = '<link rel="stylesheet" href="../style/helpStyle.css">';
 
 // Подсветка выбранной страницы в меню хедера
-$header = preg_replace_callback("{{(selected):(\d)}}", 
-    function($m) {
-        if ($m[2] == "3") {     
-           return $m[1];
-        } else {
-            return "";
-        }
-    }, 
-    $header);
+$header = letOnlyWithSpecificNumber($header, "selected", 3);
 
 // просто всё подставляем в темплейт
 $main_template= str_replace('{add_to_head}', $add_to_head, $main_template);

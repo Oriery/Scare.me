@@ -1,11 +1,6 @@
 <?php
 
-// Для дебага удобно
-function console_log( $data ){
-    echo '<script>';
-    echo 'console.log('. json_encode( $data ) .')';
-    echo '</script>';
-}
+require_once("./template_utils.php");
 
 // Импорт html
 $main_template = file_get_contents("./html/templ_main.html");
@@ -17,16 +12,8 @@ $footer = file_get_contents("./html/footer.html");
 // TODO: Скорее всего это плохой вариант
 $add_to_head = '<link rel="stylesheet" type="text/css" href="../style/lendingStyle.css" />';
 
-// Подсветка выбранной страницы в меню хедера
-$header = preg_replace_callback("{{(selected):(\d)}}", 
-    function($m) {
-        if ($m[2] == "1") {     
-           return $m[1];
-        } else {
-            return "";
-        }
-    }, 
-    $header);
+// Подсветка выбранной страницы в меню хедера 
+$header = letOnlyWithSpecificNumber($header, "selected", 1);
 
 // просто всё подставляем в темплейт
 $main_template= str_replace('{add_to_head}', $add_to_head, $main_template);
