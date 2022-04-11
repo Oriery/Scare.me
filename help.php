@@ -7,7 +7,7 @@ require_once("./template_utils.php");
 $add_to_head = '<link rel="stylesheet" href="../style/helpStyle.css">';
 
 // Импорт html
-$html = getCommonTemplate(1, $add_to_head);
+$html = getCommonTemplate(3, $add_to_head);
 $content = file_get_contents("./html/helpContent.html");
 
 // Подставляем
