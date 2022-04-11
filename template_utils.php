@@ -39,8 +39,8 @@ function getCommonTemplate(int $numOfPage, string $add_to_head) : string {
 
     // Подставляем
     $html = str_replace('{add_to_head}', $add_to_head, $html);
-    $html= str_replace('{header}', $header, $html);
-    $html= str_replace('{footer}', $footer, $html);
+    $html = str_replace('{header}', $header, $html);
+    $html = str_replace('{footer}', $footer, $html);
 
     return $html;
 }
