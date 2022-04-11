@@ -26,3 +26,21 @@ function letOnlyWithSpecificNumber(string $str, string $word, int $whichToLet) :
 
     return $str;
 }
+
+// Даёт основной темплейт, в котором есть Хедер(вместе с подстветкой) и Футер
+function getCommonTemplate(int $numOfPage, string $add_to_head) : string {
+    // Основной импорт
+    $html = file_get_contents("./html/templ_main.html");
+    $header = file_get_contents("./html/templ_header.html");
+    $footer = file_get_contents("./html/footer.html");
+
+    // Подсветка выбранной страницы в меню хедера 
+    $header = letOnlyWithSpecificNumber($header, "selected", $numOfPage);
+
+    // Подставляем
+    $html = str_replace('{add_to_head}', $add_to_head, $html);
+    $html= str_replace('{header}', $header, $html);
+    $html= str_replace('{footer}', $footer, $html);
+
+    return $html;
+}

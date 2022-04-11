@@ -2,23 +2,15 @@
 
 require_once("./template_utils.php");
 
-// Импорт html
-$main_template = file_get_contents("./html/templ_main.html");
-$header = file_get_contents("./html/header.html");
-$content = file_get_contents("./html/helpContent.html");
-$footer = file_get_contents("./html/footer.html");
-
 // Всё, что должно быть добавлено в head темплейта
 // TODO: Скорее всего это плохой вариант
 $add_to_head = '<link rel="stylesheet" href="../style/helpStyle.css">';
 
-// Подсветка выбранной страницы в меню хедера
-$header = letOnlyWithSpecificNumber($header, "selected", 3);
+// Импорт html
+$html = getCommonTemplate(1, $add_to_head);
+$content = file_get_contents("./html/helpContent.html");
 
-// просто всё подставляем в темплейт
-$main_template= str_replace('{add_to_head}', $add_to_head, $main_template);
-$main_template= str_replace('{header}', $header, $main_template);
-$main_template= str_replace('{content}', $content, $main_template);
-$main_template= str_replace('{footer}', $footer, $main_template);
+// Подставляем
+$html = str_replace('{content}', $content, $html);
 
-echo $main_template;
+echo $html;
