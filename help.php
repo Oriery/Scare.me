@@ -11,10 +11,10 @@ $footer = file_get_contents("./html/footer.html");
 $add_to_head = '<link rel="stylesheet" href="../style/helpStyle.css">';
 
 // Подсветка выбранной страницы в меню хедера
-$header = preg_replace_callback("{{selected:\d}}", 
+$header = preg_replace_callback("{{(selected):(\d)}}", 
     function($m) {
-        if (str_contains($m[0], "3")) {     
-           return "selected";
+        if ($m[2] == "3") {     
+           return $m[1];
         } else {
             return "";
         }
