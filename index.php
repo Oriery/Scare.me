@@ -1,5 +1,11 @@
 <?php
 
+function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
+}
+
 $main_template = file_get_contents("./html/templ_main.html");
 
 $header = file_get_contents("./html/header.html");
@@ -8,6 +14,15 @@ $footer = file_get_contents("./html/footer.html");
 
 $add_to_head = '<link rel="stylesheet" type="text/css" href="../style/lendingStyle.css" />';
 
+$header = preg_replace_callback("{{selected:\d}}", 
+    function($m) {
+        if (str_contains($m[0], "1")) {     
+           return "selected";
+        } else {
+            return "";
+        }
+    }, 
+    $header);
 
 $main_template= str_replace('{add_to_head}', $add_to_head, $main_template);
 $main_template= str_replace('{header}', $header, $main_template);
