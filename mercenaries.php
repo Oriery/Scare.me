@@ -11,7 +11,7 @@ $add_to_head = '<link rel="stylesheet" href="../style/mercenaryStyle.css">';
 
 // Импорт html
 $html = getCommonTemplate(2, $add_to_head);
-$content = file_get_contents("./html/templ_mercenaryContent.html");
+$content = file_get_contents("./html/templ_mercenariesContent.html");
 
 $mercenaries = getStringOfHtmlsOfMercenaries();
 
