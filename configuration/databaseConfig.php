@@ -2,7 +2,7 @@
 
 return [
     'host' => 'localhost',
-    'db_name' => 'venski',
+    'db_name' => 'scareme',
     'username' => 'root',
     'password' => 'root',
     'charset' => 'utf8'
