@@ -19,6 +19,7 @@ $mercenaries = getStringOfHtmlsOfMercenaries();
 $content = str_replace('{mercenaries}', $mercenaries, $content);
 $html = str_replace('{content}', $content, $html);
 
+$html = deleteAllPlaceholdersLeft($html);
 echo $html;
 
 function getStringOfHtmlsOfMercenaries(): string

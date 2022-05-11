@@ -44,3 +44,11 @@ function getCommonTemplate(int $numOfPage, string $add_to_head) : string {
 
     return $html;
 }
+
+function deleteAllPlaceholdersLeft(string $str) : string {
+    preg_match_all("{\{.*?\}}", $str, $matches);
+    foreach ($matches as $m) {
+        $str = str_replace($m, '', $str);
+    }
+    return $str;
+}
