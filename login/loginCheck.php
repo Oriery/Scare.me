@@ -14,6 +14,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
         // идем на страницу для авторизованного пользователя
         header("Location: /adminOnly.php");
     } else {
-        header("Location: /relogin.php");
+        header("Location: /login.php");
+        setcookie("unsuccessfullLogin", true, time() + 5, "/");
     }
 }
