@@ -6,7 +6,7 @@ class DatabaseService
 
     public function __construct()
     {
-        require_once 'database/Database.php';
+        require_once __DIR__."/../database/Database.php";
         $this->dbRepo = new Database();
     }
 
@@ -20,5 +20,13 @@ class DatabaseService
 
     public function getHelp() : array {
         return $this->dbRepo->getHelpElements();
+    }
+
+    public function checkIfValidAuth(string $login, string $passHash) : bool {
+        return $this->dbRepo->checkIfValidAuth($login, $passHash);
+    }
+
+    public function checkIfAdmin(string $login) : bool {
+        return $this->dbRepo->checkIfAdmin($login);
     }
 }
