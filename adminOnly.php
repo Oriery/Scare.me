@@ -24,7 +24,7 @@ require_once("./template_utils.php");
 $add_to_head = '<link rel="stylesheet" type="text/css" href="../style/adminOnly_Style.css" />';
 
 // Импорт html
-$html = getCommonTemplate(1, $add_to_head);
+$html = getCommonTemplate(0, $add_to_head);
 $content = file_get_contents("./html/adminOnly.html");
 
 // Подставляем
