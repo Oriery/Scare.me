@@ -12,7 +12,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
         $_SESSION['Name'] = $login;
 
         // идем на страницу для авторизованного пользователя
-        header("Location: /admin_only.php");
+        header("Location: /adminOnly.php");
     } else {
         header("Location: /relogin.php");
     }

@@ -15,7 +15,7 @@ h2 {
     --height: 300px;
     width: var(--width);
     height: var(--height);
-    margin: 10px 10px 30px;
+    margin: 0px 10px 30px;
     border: 3px solid #f28f3b;
     transition: 0.2s;
     background-color: #ffd5c2;

@@ -7,10 +7,16 @@
         </div>
         <nav>
             <ul class="menu">
-                <li class="{selected:1}"><a href="/">Главная</a></li>
-                <li class="{selected:2}"><a href="/mercenaries.php">Наёмники</a></li>
-                <li class="{selected:3}"><a href="/help.php">Помощь</a></li>
+                <li class="{menuButtonNumberSelected:1}"><a href="/">Главная</a></li>
+                <li class="{menuButtonNumberSelected:2}"><a href="/mercenaries.php">Наёмники</a></li>
+                <li class="{menuButtonNumberSelected:3}"><a href="/help.php">Помощь</a></li>
             </ul>
         </nav>
+    </div>
+    <div class="underheader">
+        <a href="login.php" {wheatherLoggedIn:0}>Login</a>
+        <a href="/" {wheatherLoggedIn:0}>Sign up</a>
+        <a href="adminOnly.php" {wheatherLoggedIn:1}>{accountName}</a>
+        <a href="/" {wheatherLoggedIn:1}>Выйти из аккаунта</a>
     </div>
 </header>

@@ -13,12 +13,12 @@ function console_log( $data ){
 //      $whichToLet=1 
 // функция возвращает 
 //           "lorem ipsum selected lorem ipsum  " 
-function letOnlyWithSpecificNumber(string $str, string $word, int $whichToLet) : string {
-    preg_match_all("{{($word):(\d)}}", $str, $matches, PREG_SET_ORDER);
+function letOnlyWithSpecificNumber(string $str, string $word, string $letword, int $whichToLet) : string {
+    preg_match_all("{{($word):(\d+)}}", $str, $matches, PREG_SET_ORDER);
 
     foreach ($matches as $m) {
         if ((int)$m[2] == $whichToLet) {     
-            $str = str_replace($m[0], $m[1], $str);
+            $str = str_replace($m[0], $letword, $str);
         } else {
             $str = str_replace($m[0], "", $str);
         }
@@ -35,7 +35,13 @@ function getCommonTemplate(int $numOfPage, string $add_to_head) : string {
     $footer = file_get_contents("./html/footer.html");
 
     // Подсветка выбранной страницы в меню хедера 
-    $header = letOnlyWithSpecificNumber($header, "selected", $numOfPage);
+    $header = letOnlyWithSpecificNumber($header, "menuButtonNumberSelected", "selected", $numOfPage);
+
+    // Залогинен ли пользователь
+    $header = letOnlyWithSpecificNumber($header, "wheatherLoggedIn", "hidden", isset($_SESSION['Name']) ? 0 : 1 );
+    if (isset($_SESSION['Name'])) {
+        $header = str_replace('{accountName}', $_SESSION['Name'], $header);
+    }
 
     // Подставляем
     $html = str_replace('{add_to_head}', $add_to_head, $html);

@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once("./template_utils.php");
 require_once("./service/DatabaseService.php");
 $dbService = new DatabaseService();
