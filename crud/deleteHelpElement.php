@@ -1,8 +1,9 @@
 <?php
 
-if (isset($_POST['name'])) {
+if (isset($_POST['question'])) {
     require_once '../service/DatabaseService.php';
     $dbService = new DatabaseService();
-    $dbService->deleteMercenary($_POST['name']);
+    $dbService->deleteQuestion($_POST['question']);
+    echo $_POST['question'];
 }
 header("Location: /adminOnly.php");

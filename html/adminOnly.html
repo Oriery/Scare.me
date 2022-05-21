@@ -1,18 +1,13 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <link rel="stylesheet" href="../style/adminOnly_Style.css">-->
-<!--</head>-->
-<!--<body>-->
 <main>
     <h2>Админская страница</h2>
     <div class="input-container">
         <form action="/crud/createMerc.php" method="post">
             <div  class="input-wrapper">
-            <input type="text" name="name" placeholder="Имя">
-            <input type="text" name="price" placeholder="Цена" pattern="\d+">
-            <input type="text" name="desc" placeholder="Описание">
-            <input type="submit" class="form-btn">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="text" name="price" placeholder="Цена" pattern="\d+">
+                <input type="text" name="desc" placeholder="Описание">
+                <textarea name="features" placeholder="Особенности"></textarea>
+                <input type="submit" class="form-btn" value="Сохранить">
             </div>
         </form>
     </div>
@@ -21,10 +16,24 @@
             <div class="input-wrapper">
                 <input type="text" name="question" placeholder="Вопрос">
                 <input type="text" name="answer" placeholder="Ответ">
-                <input type="submit" class="form-btn">
+                <input type="submit" class="form-btn" value="Сохранить">
+            </div>
+        </form>
+    </div>
+    <div class="input-container">
+        <form action="/crud/deleteMerc.php" method="post">
+            <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Имя наёмника">
+                <input type="submit" class="form-btn" value="Удалить">
+            </div>
+        </form>
+    </div>
+    <div class="input-container">
+        <form action="/crud/deleteHelpElement.php" method="post">
+            <div class="input-wrapper">
+                <input type="text" name="question" placeholder="Вопрос">
+                <input type="submit" class="form-btn" value="Удалить">
             </div>
         </form>
     </div>
 </main>
-<!--</body>-->
-<!--</html>-->

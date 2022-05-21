@@ -38,7 +38,11 @@ class DatabaseService
         $this->dbRepo->deleteByName($name);
     }
 
-    public function createHelpElem($question, $answer) {
+    public function createHelpElem(string $question, string $answer) {
         $this->dbRepo->saveHelp($question, $answer);
+    }
+
+    public function deleteQuestion(string $question) {
+        $this->dbRepo->deleteQuestion($question);
     }
 }
