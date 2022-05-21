@@ -29,4 +29,16 @@ class DatabaseService
     public function checkIfAdmin(string $login) : bool {
         return $this->dbRepo->checkIfAdmin($login);
     }
+
+    public function createMercenary(string $name, int $price, string $desc) {
+        $this->dbRepo->save($name, $price, $desc);
+    }
+
+    public function deleteMercenary(string $name) {
+        $this->dbRepo->deleteByName($name);
+    }
+
+    public function createHelpElem($question, $answer) {
+        $this->dbRepo->saveHelp($question, $answer);
+    }
 }
