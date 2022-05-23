@@ -43,7 +43,7 @@ if (isset($_POST['login']) && isset($_POST['password1']) && isset($_POST['passwo
     $url = "http://" . $_SERVER["SERVER_NAME"] . "/login/emailValidate.php?login=$login&email=$emailForMessage&key=$keyForEmailValid";
 
     require_once("../service/mailService.php");
-    sendEmail($email, "Scare.me - Подтвердите Ваш email", $url);
+    sendEmail($email, "Scare.me - Verify your email", $url);
 
     echo "На ваш email отправлено сообщение для подтверждения адреса электронной почты";
 } else {
