@@ -39,7 +39,8 @@ if (isset($_POST['login']) && isset($_POST['password1']) && isset($_POST['passwo
 
     $dbService->signupUser($login, md5($password1));
     $keyForEmailValid = $dbService->getKeyForEmailValidation($login, $email);
-    $url = $_SERVER["SERVER_NAME"] . "/login/emailValidate.php?login=$login&email=$email&key=$keyForEmailValid";
+    $emailForMessage = str_replace("@", ":", $email);
+    $url = "http://" . $_SERVER["SERVER_NAME"] . "/login/emailValidate.php?login=$login&email=$emailForMessage&key=$keyForEmailValid";
 
     require_once("../service/mailService.php");
     sendEmail($email, "Scare.me - Подтвердите Ваш email", $url);
