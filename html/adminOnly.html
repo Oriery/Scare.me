@@ -1,8 +1,9 @@
 <main>
     <h2>Админская страница</h2>
     <div class="input-container">
+        <h3>Добавить наёмника</h3>
         <form action="/crud/createMerc.php" method="post">
-            <div  class="input-wrapper">
+            <div class="input-wrapper">
                 <input type="text" name="name" placeholder="Имя">
                 <input type="text" name="price" placeholder="Цена" pattern="\d+">
                 <input type="text" name="desc" placeholder="Описание">
@@ -12,6 +13,7 @@
         </form>
     </div>
     <div class="input-container">
+        <h3>Добавить FAQ</h3>
         <form action="/crud/createHelpElement.php" method="post">
             <div class="input-wrapper">
                 <input type="text" name="question" placeholder="Вопрос">
@@ -21,6 +23,7 @@
         </form>
     </div>
     <div class="input-container">
+        <h3>Удалить наёмника</h3>
         <form action="/crud/deleteMerc.php" method="post">
             <div class="input-wrapper">
                 <input type="text" name="name" placeholder="Имя наёмника">
@@ -29,6 +32,7 @@
         </form>
     </div>
     <div class="input-container">
+        <h3>Удалить FAQ</h3>
         <form action="/crud/deleteHelpElement.php" method="post">
             <div class="input-wrapper">
                 <input type="text" name="question" placeholder="Вопрос">
