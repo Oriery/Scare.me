@@ -6,6 +6,7 @@ require_once(__DIR__ . "/service/template_utils.php");
 require_once(__DIR__ . "/service/DatabaseService.php");
 $dbService = new DatabaseService();
 
+define("pathToFolderWithImagesOfPerformers", "/media/icons_of_performers/");
 
 // Всё, что должно быть добавлено в head темплейта
 // TODO: Скорее всего это плохой вариант
@@ -32,6 +33,11 @@ function getStringOfHtmlsOfMercenaries(): string
     foreach ($dbService->getAllMercinaries() as $merc) {
         $featureArr = $dbService->getFeaturesByMercId($merc["id"]);
         $html = $template;
+        $imgPath = pathToFolderWithImagesOfPerformers . $merc["name"] . ".jpg";
+        if (!file_exists($imgPath)) {
+            $imgPath = pathToFolderWithImagesOfPerformers . "default.jpg";
+        }
+        $html = str_replace('{img_path}', $imgPath, $html);
         $html = str_replace('{name}', $merc["name"], $html);
         $html = str_replace('{price}', $merc["price"], $html);
         $html = str_replace('{peculiarities}', getStringOfHtmlsOfPercualities($featureArr), $html);
