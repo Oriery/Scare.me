@@ -41,3 +41,4 @@ if (isset($_POST['mail-text']) && isset($_POST['mail-subject'])) {
         }
     }
 }
+header("Location: /adminOnly.php");
