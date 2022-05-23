@@ -86,15 +86,23 @@ class Database
         $merc_id = $this->link->lastInsertId();
 
         foreach($features as $f) {
-            $sql = "INSERT INTO features (feature) VALUE (?);";
+            $sql = "SELECT id, feature FROM features f WHERE f.feature = ?";
             $sth = $this->link->prepare($sql);
-            $sth->execute([trim($f)]);
-            $feature_id = $this->link->lastInsertId();
+            $sth->execute([$f]);
+            $result = $sth->fetch(PDO::FETCH_ASSOC);
+            print_r($result);
+            if (empty($result)) {
+                $sql = "INSERT INTO features (feature) VALUE (?);";
+                $sth = $this->link->prepare($sql);
+                $sth->execute([trim($f)]);
+                $feature_id = $this->link->lastInsertId();
+            } else {
+                $feature_id = $result['id'];
+            }
             $sql = "INSERT INTO mercenaries_features (mercenary_id, feature_id) VALUES (?, ?);";
             $sth = $this->link->prepare($sql);
             $sth->execute([$merc_id, $feature_id]);
         }
-
     }
 
     public function deleteByName(string $name) {
