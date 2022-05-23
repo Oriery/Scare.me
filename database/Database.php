@@ -88,7 +88,7 @@ class Database
         foreach($features as $f) {
             $sql = "SELECT id, feature FROM features f WHERE f.feature = ?";
             $sth = $this->link->prepare($sql);
-            $sth->execute([$f]);
+            $sth->execute([trim($f)]);
             $result = $sth->fetch(PDO::FETCH_ASSOC);
             print_r($result);
             if (empty($result)) {
