@@ -31,7 +31,7 @@ class DatabaseService
     }
 
     public function createMercenary(string $name, int $price, string $desc, string $features) {
-        $this->dbRepo->save($name, $price, $desc, explode('\n', $features, PHP_INT_MAX));
+        $this->dbRepo->save($name, $price, $desc, explode(',', $features, PHP_INT_MAX));
     }
 
     public function deleteMercenary(string $name) {

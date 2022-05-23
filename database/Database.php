@@ -88,7 +88,7 @@ class Database
         foreach($features as $f) {
             $sql = "INSERT INTO features (feature) VALUE (?);";
             $sth = $this->link->prepare($sql);
-            $sth->execute([$f]);
+            $sth->execute([trim($f)]);
             $feature_id = $this->link->lastInsertId();
             $sql = "INSERT INTO mercenaries_features (mercenary_id, feature_id) VALUES (?, ?);";
             $sth = $this->link->prepare($sql);
