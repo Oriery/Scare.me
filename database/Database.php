@@ -45,11 +45,11 @@ class Database
         $sql = "SELECT feature FROM mercenaries
                 INNER JOIN mercenaries_features ON mercenaries.id = mercenaries_features.mercenary_id
                 INNER JOIN features ON mercenaries_features.feature_id = features.id
-                WHERE mercenary_id = $id;";
+                WHERE mercenary_id = ?;";
 
         $sth = $this->link->prepare($sql);
 
-        $sth->execute();
+        $sth->execute([$id]);
 
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
         if ($result === false) {
@@ -60,10 +60,10 @@ class Database
     }
 
     public function checkIfValidAuth(string $login, string $passHash) : bool {
-        $sql = "SELECT login FROM users WHERE login = '$login' AND passHash = '$passHash';";
+        $sql = "SELECT login FROM users WHERE login = ? AND passHash = ?;";
 
         $sth = $this->link->prepare($sql);
-        $sth->execute();
+        $sth->execute([$login, $passHash]);
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
         return isset($result[0]);
     }
@@ -71,10 +71,10 @@ class Database
     public function checkIfAdmin(string $login) : bool {
         $sql = "SELECT id FROM admins 
         INNER JOIN users on users.id = admins.user_id
-        WHERE login = \"$login\";"; //У меня почему-то на эту строку ругается
+        WHERE login = ?;";
 
         $sth = $this->link->prepare($sql);
-        $sth->execute();
+        $sth->execute([$login]);
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
         return isset($result[0]);
     }

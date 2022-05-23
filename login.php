@@ -1,6 +1,6 @@
 <?php
 
-require_once("./template_utils.php");
+require_once(__DIR__ . "/service/template_utils.php");
 
 // Импорт html
 $html = file_get_contents("html/login.html");

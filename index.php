@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once("./template_utils.php");
+require_once(__DIR__ . "/service/template_utils.php");
 
 // Всё, что должно быть добавлено в head темплейта
 // TODO: Скорее всего это плохой вариант
