@@ -88,16 +88,15 @@ class Database
         foreach($features as $f) {
             $sql = "SELECT id, feature FROM features f WHERE f.feature = ?";
             $sth = $this->link->prepare($sql);
-            $sth->execute([$f]);
-            $result = $sth->fetch(PDO::FETCH_ASSOC);
-            print_r($result);
+            $sth->execute([trim($f)]);
+            $result = $sth->fetchAll(PDO::FETCH_ASSOC);
             if (empty($result)) {
                 $sql = "INSERT INTO features (feature) VALUE (?);";
                 $sth = $this->link->prepare($sql);
                 $sth->execute([trim($f)]);
                 $feature_id = $this->link->lastInsertId();
             } else {
-                $feature_id = $result['id'];
+                $feature_id = $result[0]['id'];
             }
             $sql = "INSERT INTO mercenaries_features (mercenary_id, feature_id) VALUES (?, ?);";
             $sth = $this->link->prepare($sql);
