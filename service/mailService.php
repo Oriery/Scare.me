@@ -25,11 +25,7 @@ function sendEmail(string $destAddr, string $subject, string $data) {
     $mail->addAddress($destAddr);
 
     try {
-        if ($mail->send()) {
-            echo "good!";
-        } else {
-            echo "bad!";
-        }
+        $mail->send();
     } catch (\PHPMailer\PHPMailer\Exception $e) {
 
     }
