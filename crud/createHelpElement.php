@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/adminCheck.php");
+require_once("../service/adminCheck.php");
 
 if (isset($_POST['question']) && isset($_POST['answer'])) {
     require_once '../service/DatabaseService.php';
