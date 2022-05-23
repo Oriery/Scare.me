@@ -53,6 +53,10 @@ footer p {
     text-decoration: underline;
 }
 
+.underheader a.selected {
+    color: #C8553D;
+}
+
 header .navbar {
     background: #588B8B;
 }
