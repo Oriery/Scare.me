@@ -143,4 +143,11 @@ class Database
         $sth = $this->link->prepare($sql);
         $sth->execute([$question]);
     }
+
+    public function getEmails() {
+        $sql = "SELECT email FROM users";
+        $sth = $this->link->prepare($sql);
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

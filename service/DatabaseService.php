@@ -53,4 +53,8 @@ class DatabaseService
     public function deleteQuestion(string $question) {
         $this->dbRepo->deleteQuestion($question);
     }
+
+    public function getAllEmails() : array {
+        return $this->dbRepo->getEmails();
+    }
 }
