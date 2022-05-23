@@ -34,8 +34,20 @@ class DatabaseService
         return $this->dbRepo->checkIfLoginExists($login);
     }
 
-    public function signupUser($login, $email, $passwordHash) {
-        $this->dbRepo->signupUser($login, $email, $passwordHash);
+    public function checkEmailValidationKey(string $login, string $email, string $key) : bool {
+        return $this->dbRepo->checkEmailValidationKey($login, $email, $key);
+    }
+
+    public function getKeyForEmailValidation(string $login, string $email) : string {
+        return $this->dbRepo->getKeyForEmailValidation($login, $email);
+    }
+
+    public function setUserEmail(string $login, string $email) {
+        return $this->dbRepo->setUserEmail($login, $email);
+    }
+
+    public function signupUser($login, $passwordHash) {
+        $this->dbRepo->signupUser($login, $passwordHash);
     }
 
     public function createMercenary(string $name, int $price, string $desc, string $features) {

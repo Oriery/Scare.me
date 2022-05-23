@@ -37,9 +37,14 @@ if (isset($_POST['login']) && isset($_POST['password1']) && isset($_POST['passwo
     if ($dbService->checkIfLoginExists($login)) 
         cancelWithError("Этот логин уже используется");
 
-    $dbService->signupUser($login, $email, md5($password1));
+    $dbService->signupUser($login, md5($password1));
+    $keyForEmailValid = $dbService->getKeyForEmailValidation($login, $email);
+    $url = $_SERVER["SERVER_NAME"] . "/login/emailValidate.php?login=$login&email=$email&key=$keyForEmailValid";
 
-    require_once("./onSuccessfulAuth.php");
+    require_once("../service/mailService.php");
+    sendEmail($email, "Scare.me - Подтвердите Ваш email", $url);
+
+    echo "На ваш email отправлено сообщение для подтверждения адреса электронной почты";
 } else {
     header('HTTP/1.1 400 Bad Request');
 }

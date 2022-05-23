@@ -89,11 +89,56 @@ class Database
         return isset($result[0]);
     }
 
-    public function signupUser($login, $email, $passwordHash) {
-        $sql = "INSERT INTO users (login, email, passHash) VALUES (?, ?, ?);";
+    public function signupUser($login, $passwordHash) {
+        $sql = "INSERT INTO users (login, passHash) VALUES (?, ?);";
 
         $sth = $this->link->prepare($sql);
-        $sth->execute([$login, $email, $passwordHash]);
+        $sth->execute([$login, $passwordHash]);
+    }
+
+    public function checkEmailValidationKey(string $login, string $email, string $key) : bool {
+        return $this->getKeyForEmailValidation($login, $email) == $key;
+    }
+
+    function getEmailValidationKey(string $login, string $email, string $passHash, string $hash) : string{
+        return md5($login . $email . $passHash . $hash);
+    }
+
+    public function getKeyForEmailValidation(string $login, string $email) : string {
+        $sql = "SELECT passHash, hash FROM users WHERE login = ?";
+        
+        $sth = $this->link->prepare($sql);
+        $sth->execute([$login]);
+        $result = $sth->fetch();
+        $passHash = $result["passHash"];
+        $hash = $result["hash"];
+
+        if ($hash == null) {
+            $hash = $this->generateRandomHash();
+
+            $sql = "UPDATE users SET hash=? WHERE login = ?;";
+            $sth = $this->link->prepare($sql);
+            $sth->execute([$hash, $login]);
+        }
+
+        return $this->getEmailValidationKey($login, $email, $passHash, $hash);
+    }
+
+    public function setUserEmail(string $login, string $email) {
+        $sql = "UPDATE users SET email=? WHERE login = ?;";
+
+        $sth = $this->link->prepare($sql);
+        $sth->execute([$email, $login]);
+    }
+
+    private function generateRandomHash() {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < 32; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 
     public function save(string $name, int $price, string $desc, $features) {
