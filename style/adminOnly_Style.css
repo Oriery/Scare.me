@@ -8,16 +8,18 @@ h2 {
     width: 100%;
     display: block;
 }
+
+h3 {
+    font-family: Ubuntu-Bold, serif;
+    color: #487B7B;
+    margin: 7px;
+}
+
 .input-container {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 15px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .input-wrapper {
