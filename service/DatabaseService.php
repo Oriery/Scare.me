@@ -30,8 +30,8 @@ class DatabaseService
         return $this->dbRepo->checkIfAdmin($login);
     }
 
-    public function createMercenary(string $name, int $price, string $desc) {
-        $this->dbRepo->save($name, $price, $desc);
+    public function createMercenary(string $name, int $price, string $desc, string $features) {
+        $this->dbRepo->save($name, $price, $desc, explode('\n', $features, PHP_INT_MAX));
     }
 
     public function deleteMercenary(string $name) {

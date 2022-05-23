@@ -17,11 +17,6 @@ class Database
         return $this;
     }
 
-    public function execute($sql) {
-        $sth = $this->link->prepare($sql);
-        return $sth->execute();
-    }
-
     public function getMercenaries(): array {
         $sql = "SELECT id, name, price, description FROM mercenaries";
         $sth = $this->link->prepare($sql);
@@ -84,23 +79,22 @@ class Database
         return isset($result[0]);
     }
 
-    public function save(string $name, int $price, string $desc) {
-
-
-        $sql = "INSERT INTO mercenaries (name, price, description) VALUES (?, ?, ?);
-                SELECT LAST_INSERT_ID();";
+    public function save(string $name, int $price, string $desc, $features) {
+        $sql = "INSERT INTO mercenaries (name, price, description) VALUES (?, ?, ?);";
         $sth = $this->link->prepare($sql);
         $sth->execute([$name, $price, $desc]);
-        $merc_id = $sth->fetch(PDO::FETCH_ASSOC)["id"];
+        $merc_id = $this->link->lastInsertId();
 
-        /**
-         * $features.foreach($f => {
-         *      $sql = "INSERT INTO features (feature) VALUE ?;
-         *              INSERT INTO mercenaries_features (mercenary_id, feature_id) VALUE (?, LAST_INSERT_ID());";
-         *      $sth = $this->link->prepare($sql);
-         *      $sth->execute($f, $merc_id);
-         * })
-         */
+        foreach($features as $f) {
+            $sql = "INSERT INTO features (feature) VALUE (?);";
+            $sth = $this->link->prepare($sql);
+            $sth->execute([$f]);
+            $feature_id = $this->link->lastInsertId();
+            $sql = "INSERT INTO mercenaries_features (mercenary_id, feature_id) VALUES (?, ?);";
+            $sth = $this->link->prepare($sql);
+            $sth->execute([$merc_id, $feature_id]);
+        }
+
     }
 
     public function deleteByName(string $name) {
