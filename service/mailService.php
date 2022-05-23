@@ -1,12 +1,11 @@
 <?php
 
 require_once("DatabaseService.php");
+require_once '../mailer/PHPMailer.php';
+require_once '../mailer/SMTP.php';
+require_once '../mailer/Exception.php';
 
 function sendEmail(string $destAddr, string $subject, string $data) {
-    require '../mailer/PHPMailer.php';
-    require '../mailer/SMTP.php';
-    require '../mailer/Exception.php';
-
     $from = "fromthedeepsize@gmail.com";
     $mail = new PHPMailer\PHPMailer\PHPMailer();
     $mail->IsHTML(true);
