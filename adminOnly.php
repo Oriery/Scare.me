@@ -1,23 +1,7 @@
 <?php
-//Запуск сессий;
-session_start();
 
-//если пользователь не авторизован
-if (!(isset($_SESSION['Name']))) {
-    //идем на страницу авторизации
-    header("Location: login.php");
-    exit;
-};
-
-// если пользователь не админ
-if (!(isset($_SESSION['isAdmin']))) {
-    //идем на страницу пользователя
-    header("Location: /"); // TODO можно например сделать страницу пользователя или хз что
-    exit;
-};
-
-
-require_once("./template_utils.php");
+require_once(__DIR__ . "/service/adminCheck.php");
+require_once(__DIR__ . "/service/template_utils.php");
 
 // Всё, что должно быть добавлено в head темплейта
 // TODO: Скорее всего это плохой вариант

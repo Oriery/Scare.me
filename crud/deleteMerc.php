@@ -1,4 +1,5 @@
 <?php
+require_once(__DIR__ . "/adminCheck.php");
 
 if (isset($_POST['name'])) {
     require_once '../service/DatabaseService.php';

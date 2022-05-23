@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once("./template_utils.php");
-require_once("./service/DatabaseService.php");
+require_once(__DIR__ . "/service/template_utils.php");
+require_once(__DIR__ . "/service/DatabaseService.php");
 $dbService = new DatabaseService();
 
 
