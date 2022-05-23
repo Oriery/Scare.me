@@ -79,6 +79,23 @@ class Database
         return isset($result[0]);
     }
 
+    public function checkIfLoginExists(string $login) : bool {
+        $sql = "SELECT login FROM `users` WHERE login = ?;";
+
+        $sth = $this->link->prepare($sql);
+        $sth->execute([$login]);
+        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        return isset($result[0]);
+    }
+
+    public function signupUser($login, $email, $passwordHash) {
+        $sql = "INSERT INTO users (login, email, passHash) VALUES (?, ?, ?);";
+
+        $sth = $this->link->prepare($sql);
+        $sth->execute([$login, $email, $passwordHash]);
+    }
+
     public function save(string $name, int $price, string $desc, $features) {
         $sql = "INSERT INTO mercenaries (name, price, description) VALUES (?, ?, ?);";
         $sth = $this->link->prepare($sql);

@@ -30,6 +30,14 @@ class DatabaseService
         return $this->dbRepo->checkIfAdmin($login);
     }
 
+    public function checkIfLoginExists(string $login) : bool {
+        return $this->dbRepo->checkIfLoginExists($login);
+    }
+
+    public function signupUser($login, $email, $passwordHash) {
+        $this->dbRepo->signupUser($login, $email, $passwordHash);
+    }
+
     public function createMercenary(string $name, int $price, string $desc, string $features) {
         $this->dbRepo->save($name, $price, $desc, explode(',', $features, PHP_INT_MAX));
     }

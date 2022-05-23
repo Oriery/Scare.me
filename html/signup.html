@@ -12,26 +12,25 @@
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
                 {not_correct}
-                <form action="/login/loginCheck.php" method="post" class="login100-form flex-sb flex-w">
+                <form action="/login/signupCheck.php" method="post" class="login100-form flex-sb flex-w">
                     <span class="login100-form-title p-b-51">
-                        Вход
+                        Регистрация
                     </span>
                     <div class="wrap-input100 m-b-16">
-                        <input class="input100" type="username" name="login" placeholder="Логин">
+                        <input class="input100" type="email" name="email" placeholder="Email" value="{email}">
                     </div>
                     <div class="wrap-input100 m-b-16">
-                        <input class="input100" type="password" name="password" placeholder="Пароль">
+                        <input class="input100" type="username" name="login" placeholder="Логин" value="{login}">
                     </div>
-                    <div class="p-b-24">
-                        <div>
-                            <a href="/" class="txt1">
-                                Забыли пароль?
-                            </a>
-                        </div>
+                    <div class="wrap-input100 m-b-16">
+                        <input class="input100" type="password" name="password1" placeholder="Пароль" value="{password1}">
+                    </div>
+                    <div class="wrap-input100 m-b-16">
+                        <input class="input100" type="password" name="password2" placeholder="Повторите пароль">
                     </div>
                     <div class="container-login100-form-btn m-t-17 m-b-down">
                         <button class="login100-form-btn">
-                            Войти
+                            Зарегистрироваться
                         </button>
                     </div>
                     <div class="flex-centre p-b-24">
