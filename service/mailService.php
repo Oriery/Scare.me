@@ -1,5 +1,7 @@
 <?php
 
+require_once("DatabaseService.php");
+
 function sendEmail(string $destAddr, string $subject, string $data) {
     require '../mailer/PHPMailer.php';
     require '../mailer/SMTP.php';
@@ -34,6 +36,8 @@ if (isset($_POST['mail-text']) && isset($_POST['mail-subject'])) {
     $dbService = new DatabaseService();
     $emails = $dbService->getAllEmails();
     foreach ($emails as $e) {
-        sendEmail($e, $_POST['mail-subject'], $_POST['mail-text']);
+        if ($e["email"]) {
+            sendEmail($e["email"], $_POST['mail-subject'], $_POST['mail-text']);
+        }
     }
 }
