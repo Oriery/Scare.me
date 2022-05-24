@@ -9,7 +9,7 @@ if (isset($_GET['login']) && isset($_GET['email']) && isset($_GET['key'])) {
 
     if ($dbService->checkEmailValidationKey($_GET['login'], $email, $_GET['key'])) {
         $dbService->setUserEmail($_GET['login'], $email);
-        echo "Вы успешно подтвердили email адрес";
+        echo file_get_contents("../html/onSuccEmailVerif.html");
         exit();
     } else {
         echo "Ключ неверный";

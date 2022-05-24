@@ -45,7 +45,7 @@ if (isset($_POST['login']) && isset($_POST['password1']) && isset($_POST['passwo
     require_once("../service/mailService.php");
     sendEmail($email, "Scare.me - Verify your email", $url);
 
-    echo "На ваш email отправлено сообщение для подтверждения адреса электронной почты";
+    echo file_get_contents("../html/onSuccReg.html");
 } else {
     header('HTTP/1.1 400 Bad Request');
 }
